@@ -1,22 +1,22 @@
 
-function investimento() {
-  let saldoAna = 0;
-  let saldoPaula = 0;
-  let meses = 0;
+function investment() {
+  let paulaBalance: number = 0;
+  let anaBalance: number = 0;
+  let months: number = 0;
 
-  function investir() {
-    let jurosAna = saldoAna * (0.8 / 100)
-    let jurosPaula = saldoPaula * (0.2 / 100)
-    saldoAna += 500 + jurosAna;
-    saldoPaula += 1000 + jurosPaula;
-    meses++
+  function invest() {
+    let feesAna = paulaBalance * (0.8 / 100)
+    let feesPaula = anaBalance * (0.2 / 100)
+    paulaBalance += 500 + feesAna;
+    anaBalance += 1000 + feesPaula;
+    months++
   }
 
   do {
-    investir()
-  } while (saldoAna < saldoPaula)
+    invest()
+  } while (paulaBalance < anaBalance)
 
-  return meses;
+  return months;
 }
 
-console.log(investimento());
+console.log(investment());
