@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { SearchCepUseCase } from "./SearchCepUseCase";
 import { AppError } from "../../../../errors/AppError";
 
-export class CepController {
+export class SearchCepController {
   async handler(request: Request, response: Response): Promise<Response> {
     const { cep } = request.query;
     const searchCepUseCase = new SearchCepUseCase();

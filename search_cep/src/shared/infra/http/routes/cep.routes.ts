@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { CepController } from "../../../../modules/cep/useCases/searchCep/SearchCepController";
+import { SearchCepController } from "../../../../modules/cep/useCases/searchCep/SearchCepController";
 
-const cepController = new CepController();
+const searchCepController = new SearchCepController();
 
 export const cepRoutes = Router();
 
-cepRoutes.get("/search", cepController.handler);
+cepRoutes.get("/search", searchCepController.handler);
