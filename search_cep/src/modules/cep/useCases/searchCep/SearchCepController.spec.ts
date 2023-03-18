@@ -8,8 +8,6 @@ describe("Search CEP controller", () => {
       .query({ cep: "63460000" })
       .expect(200);
 
-    console.log(body);
-
-    // expect(body.city).toBe("Pereiro");
+    expect(body.city).toBe("Pereiro");
   });
 });
